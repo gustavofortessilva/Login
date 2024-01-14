@@ -1,0 +1,53 @@
+@charset "UTF-8";
+:root{
+    --lilas : #5f2c82; 
+    --verde : #49a09d;
+}
+@media screen and (min-width: 660px){
+    body{
+        background-image: linear-gradient(to bottom, var(--lilas),#703299 ,var(--verde));
+    }
+}
+@media screen and (min-width:660px) and (max-width:992px) {
+    /* Tablet */
+    main{
+
+        width: 90vw;
+        transition: width 0.3s ease, height 1s ease;
+    }
+    div#image{
+        float: left;
+        width: 30%;
+        height: 370px;
+    }
+    div#formulario{
+        height: 370px;
+        padding: 0px 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        float: right;
+        width: 70%;
+    }
+}
+@media screen and (min-width:992px){
+    /* PC -> TV */
+    main{
+        width: 992px;
+        font-size: 1.2em;
+        transition: width 1s ease, height 1s ease, font-size 1s;
+    }
+    div#image{
+        float: right;
+        width: 50%;
+        height: 500px;
+    }
+    div#formulario{
+        display: flex;
+        padding: 0px 30px;
+        flex-direction: column;
+        float: left;
+        height: 500px;
+        width: 50%;
+    }
+}
